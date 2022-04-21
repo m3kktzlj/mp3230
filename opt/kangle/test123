@@ -71,8 +71,8 @@ workscript_start(){
 	if [ -f "${dir02}/run/mp3230_30_m_ver" ];then
     	source ${dir02}/run/mp3230_30_m_ver
 	fi
-	if [ -f "${dir51}/kangle_install_ver" ];then
-    	source ${dir51}/kangle_install_ver
+	if [ -f "${dir03}/smp/kangle_install_ver" ];then
+    	source ${dir03}/smp/kangle_install_ver
 	fi
 	if [ -f "${dir02}/run/mp3230_30_u_ver" ];then
     	source ${dir02}/run/mp3230_30_u_ver
