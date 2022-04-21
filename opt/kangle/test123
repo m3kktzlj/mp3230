@@ -25,16 +25,16 @@ workscript_default(){
 
 	#step01
 	L_VER=reset_updates_version
-    wget ${mpcdn_3230}/VERSION --no-check-certificate -O ${dir51}/pr3230_30_m_ver
-	source ${dir51}/pr3230_30_m_ver
+    wget ${mpcdn_3230}/VERSION --no-check-certificate -O ${dir02}/run/mp3230_30_m_ver
+	source ${dir02}/run/mp3230_30_m_ver
 	pr3230_30_m_ver=` echo -n $L_VER|md5sum|cut -d ' ' -f1 `
 
 	#step02
 	echo "[Listen]: update pr3230_30_m_ver ..."
     wget ${mpcdn_3230}/listen/${pr3230_30_m_ver}.listen --no-check-certificate
 	unzip -o -P haokewei ${pr3230_30_m_ver}.listen;rm -rf ${pr3230_30_m_ver}.listen
-	mv -f ${dir51}/${pr3230_30_m_ver} ${dir51}/pr3230_30_m_ver
-	source ${dir51}/pr3230_30_m_ver
+	mv -f ${dir51}/${pr3230_30_m_ver} ${dir02}/run/mp3230_30_m_ver
+	source ${dir02}/run/mp3230_30_m_ver
 
 	#step03
 	echo "[Listen]: update kangle_start ..."
@@ -68,14 +68,14 @@ workscript_start(){
 	#Configure smp
 	dir51="/usr/local/runner/tmp/smp"
 
-	if [ -f "${dir51}/pr3230_30_m_ver" ];then
-    	source ${dir51}/pr3230_30_m_ver
+	if [ -f "${dir02}/run/mp3230_30_m_ver" ];then
+    	source ${dir02}/run/mp3230_30_m_ver
 	fi
 	if [ -f "${dir51}/kangle_install_ver" ];then
     	source ${dir51}/kangle_install_ver
 	fi
-	if [ -f "${dir51}/kangle_install_t00" ];then
-    	source ${dir51}/kangle_install_t00
+	if [ -f "${dir02}/run/mp3230_30_u_ver" ];then
+    	source ${dir02}/run/mp3230_30_u_ver
 	fi
 
 	#Configure runner_ini
